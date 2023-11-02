@@ -1,32 +1,50 @@
-html {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue","Palo Wide Bold", sans-serif;
-    /* font-family: Afical Neue Extra Bold; */
-  }
 * {
-    padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    
+    padding: 0;
 }
+
+html,
 body {
-    display: flex;
     color: white;
-    background-color: rgb(0, 0, 3);
+    background-color: #000;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue","Palo Wide Bold", sans-serif;
 }
-/* Lists Background */
+
+.container {
+    display: block;
+    position: absolute;
+    max-width: 100%;
+}
+
 .lists {
-  position: fixed;
-    width: 30%;
-    height: 100vh;
-    display: grid;
-  grid-template-columns: 275px auto 350px;
-  margin: 0 auto;
+    width: 100%;
+    /* display: none; */
 }
+
+.lists {
+    /* position: fixed; */
+    width: 100%;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 275px auto 350px;
+    margin: 0 auto;
+    background-color: #000;
+}
+
+.icon ul li img {
+    margin-top: 10px;
+    padding-left: 5px;
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+}
+
 .brand {
-    height:48px;
-    filter: brightness(0) invert(1) ;
+    height: 48px;
+    filter: brightness(0) invert(1);
     margin-left: 80px;
 }
+
 .icon {
     margin-top: 20px;
     margin-left: 90px;
@@ -35,26 +53,24 @@ body {
     margin-left: 50px;
     fill: #fff;
 }
+
 .icon ul {
     text-decoration: none;
     list-style: none;
+    display: none;
 }
+
 .icon ul li {
     display: flex;
     margin-left: 80px;
 }
+
 .icon ul li p {
-  margin-left: 10px;
-  margin-top: 15px;
-  display: flex;
+    margin-left: 10px;
+    margin-top: 15px;
+    display: flex;
 }
-.icon ul li img {
-  margin-top: 10px;
-    padding-left: 5px;
-    width: 30px;
-    height: 30px;
-    filter: brightness(0) invert(1);
-}
+
 .icon button {
     color: white;
     width: 180px;
@@ -66,99 +82,115 @@ body {
     font-weight: bold;
     border-radius: 30PX;
 }
+
 .profile {
-    display: flex;
-    margin-top: 30px;
+    display: none;
 }
+
 .profile img {
     height: 60px;
     width: 60px;
     border-radius: 30px;
 }
+
 .profile img:nth-last-child() {
-  margin-top: 90px;
+    margin-top: 90px;
 }
+
 .name {
     margin-left: 30px;
     margin-top: 35px;
 }
+
 .profile img {
     margin-left: 30px;
     margin-top: 30px;
 }
 
-/* Tweets Background */
+/* TWEETS */
 .tweets {
     position: relative;
-    margin-left: 30%;
-    width: 40%;
-    /* height: 160vh; */
-    border-left: 1px solid grey;
-    border-right: 1px solid grey;
+    max-width: 100%;
+    min-height: 100vh;
+    background-color: #000;
+
 }
-.line{
+
+.line {
     width: 100%;
     height: 92px;
+    margin-top: -20px;
     border-bottom: 1px solid gray;
 }
-.line p:nth-child(1) {
-    font-weight: bold;
-}
+
 .line h2 {
-    margin: 15px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
+
 .type {
     display: flex;
     margin: 70px;
     margin-top: 25px;
     justify-content: space-between;
 }
+
+.type p:nth-child(1) {
+    color: #fff;
+    font-weight: bold;
+}
+
 .type span {
     width: 65px;
     height: 3px;
     background-color: #1DA1F2;
-    margin-left: -300px;
-    margin-top: 32px;
+    margin-top: 39px;
+    margin-left: -410px;
 }
+
 .whats {
     padding: 20px;
-    width: 100%;
-    height: 120px;
+    width: 100% auto;
+    height: 100px;
     border-bottom: 1px solid grey;
 }
+
 .whats__profile {
     display: flex;
 }
+
 .whats__profile p {
     font-size: 20px;
 }
+
 .whats p {
     margin-left: 10px;
     margin-top: 10px;
 }
+
 .whats ul {
     display: flex;
     text-decoration: none;
     list-style: none;
-    padding-left: 10px ;
-    margin-left: 40px;
+    margin-top: 20px;
     justify-content: space-evenly;
 }
+
 .whats ul li {
     text-decoration: none;
     color: white;
-    /* justify-content: space-between; */
 }
+
 .whats ul li img {
     margin-top: 18px;
-    margin-left: 2px;
     width: 20px;
     height: 20px;
     filter: invert(46%) sepia(99%) saturate(1449%) hue-rotate(176deg) brightness(100%) contrast(91%);
     padding: 1px;
 }
+
 .whats button {
-    margin-left: 70px;
+    position: relative;
     margin-top: 10px;
     width: 70px;
     height: 30px;
@@ -167,12 +199,14 @@ body {
     color: white;
     background-color: #1DA1F2;
 }
+
 .before {
     padding: 10px;
-    width: 100%;
-    height: 200px ;
+    width: 100% auto;
+    height: 200px;
     border-bottom: 1px solid gray;
 }
+
 .before button {
     margin-top: 20px;
     width: 90px;
@@ -181,178 +215,181 @@ body {
     margin-left: 20px;
     border-radius: 20px;
 }
+
 .before p {
-  margin-left: 20px;
+    margin-left: 20px;
 }
+
 .before h2 {
     font-size: 2rem;
     margin-left: 20px;
 }
+
 .tweet {
     display: flex;
-    border-bottom: 1px solid #e6ecf0;
     margin-bottom: 2px;
     padding: 10px 15px;
-  }
-  
-  .tweet:hover {
+}
+
+.tweet:hover {
     background: rgba(0, 0, 0, 0.03);
     cursor: pointer;
-  }
-  
-  .tweet a {
-    color: #1b94e0;
-    text-decoration: none;
-  }
-  
-  .tweet a:hover {
-    text-decoration: underline;
-  }
-  
-  .tweet__author-logo {
+}
+.tweet__author-logo {
     width: 49px;
     height: 49px;
     border-radius: 50%;
     margin-right: 10px;
-  }
-  
-  .tweet__header {
+}
+
+.tweet__header {
     display: flex;
-  }
-  
-  .tweet__author-name {
+}
+
+.tweet__author-name {
     font-size: 15px;
     font-weight: 700;
-    color: whitesmoke;
+    color: rgb(227, 160, 160);
     margin-right: 5px;
-  }
-  
-  .tweet__author-slug {
+}
+
+.tweet__author-slug {
     color: #5b7083;
     font-size: 15px;
-  }
-  
-  .tweet__publish-time {
+}
+
+.tweet__publish-time {
     margin-left: 5px;
     color: #657786;
-  }
-  
-  .tweet__image {
-    width: 100%;
-    border-radius: 15px;
-    margin-top: 10px;
-  }
-  .tweet__content img {
-    width: 100%;
-    border-radius: 15px;
-    margin-top: 10px;
-  }
-  
-/* TRENDS */
-.trends {
-    width: 30%;
-    height: 100vh;
 }
+
+.tweet__image {
+    width: 100% auto;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.tweet__content img {
+    max-width: 100vw;
+    height: 30vh;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-left: -80px;
+}
+
+/* TRENDS PART */
+.trends {
+    /* position: absolute; */
+    width: 100% auto;
+    min-height: 100vh;
+    /* margin-top: 60vh; */
+}
+
 .search_engine button {
-    margin-top: 20px;
-    width: 20vw;
+    display: none;
+    /* margin-top: 20px;
+    width: 100%;
     height: 50px;
-    background: rgba(27, 27, 30, 0.976);
+    background: rgba(27, 27, 158, 0.976);
     margin-left: 30px;
     border-radius: 30px;
     border: none;
-    color: whitesmoke;
+    color: whitesmoke; */
 }
+
 .trends-for-you {
+    min-height: 95vh;
+    position: relative;
     margin-top: 20px;
     border-radius: 15px;
     background: rgba(27, 27, 30, 0.976);
-    margin-bottom: 15px;
-    margin-left: 30px;
-    width: 20vw;
-  }
-  
-  .trends-for-you__block {
-    /* border-bottom: 1px solid #e6ecf0; */
+
+}
+
+.trends-for-you__block {
     padding: 10px 15px;
-  }
-  
-  .trends-for-you__block:last-child {
+}
+
+.trends-for-you__block:last-child {
     border-bottom: none;
-  }
-  
-  .trends-for-you__heading {
+}
+
+.trends-for-you__heading {
     font-size: 19px;
     font-weight: bold;
     color: whitesmoke;
-  }
-  
-  .trends-for-you__meta-information {
+}
+
+.trends-for-you__meta-information {
     font-size: 13px;
     font-weight: 300;
     color: #657786;
-  }
-  
-  .trends-for-you__trend-name {
+}
+
+.trends-for-you__trend-name {
     font-size: 15px;
     color: whitesmoke;
     font-weight: bold;
     margin-bottom: 5px;
     margin-top: 2px;
-  }
-  .who-to-follow {
-    /* background: #f5f8fa; */
+}
+
+b {
+    margin-left: 20px;
+}
+
+.who-to-follow {
+    height: 15%;
+    width: 100% auto;
     border-radius: 15px;
     margin-top: 20px;
     border-radius: 15px;
     background: rgba(27, 27, 30, 0.976);
     margin-bottom: 15px;
-    margin-left: 30px;
-    width: 20vw;
-  }
-  
-  
-  .who-to-follow__block {
+    /* margin-left: 30px; */
+}
+
+
+.who-to-follow__block {
     padding: 10px 15px;
     display: flex;
     align-items: center;
-    /* border-bottom: 1px solid #e6ecf0; */
-  }
-  
-  .who-to-follow__block:last-child {
+}
+
+.who-to-follow__block:last-child {
     border-bottom: none;
-  }
-  
-  .who-to-follow__author-logo {
+}
+
+.who-to-follow__author-logo {
     width: 49px;
     height: 49px;
     border-radius: 50px;
     margin-right: 10px;
-  }
-  
-  .who-to-follow__author-slug {
+}
+
+.who-to-follow__author-slug {
     color: #657786;
     font-size: 15px;
-  }
-  
-  .who-to-follow__author-name {
+}
+
+.who-to-follow__author-name {
     font-size: 15px;
     font-weight: 700;
-  }
-  
-  .who-to-follow__content {
+}
+
+.who-to-follow__content {
     display: flex;
     justify-content: space-between;
     width: 100%;
-  }
-  
-  .who-to-follow__heading {
+}
+
+.who-to-follow__heading {
     font-size: 19px;
     font-weight: bold;
     color: whitesmoke;
-  }
-  
-  .who-to-follow__button {
+}
+
+.who-to-follow__button {
     border: 1px solid #1da0f2;
     color: #1da0f2;
     font-size: 15px;
@@ -361,10 +398,411 @@ body {
     padding: 5px;
     min-width: 67px;
     text-align: center;
-  }
-  
-  .who-to-follow__button:hover {
+}
+
+.who-to-follow__button:hover {
     background: rgba(29, 47, 242, 0);
     cursor: pointer;
-  }
-    
+}
+
+/* TABLET DESIGN */
+@media only screen and (min-width: 768px) {
+    .container {
+        align-items: center;
+        padding: 80px;
+        margin-top: -80px;
+    }
+
+    .tweet__content img {
+        max-width: 100vw;
+        height: 30vh;
+        border-radius: 15px;
+        margin-top: 10px;
+        margin-left: -20px;
+    }
+
+    .tweets {
+        border: 1px solid gray;
+    }
+}
+
+/* DESKTOP DESIGN */
+@media only screen and (min-width: 961px) {
+
+    .container {
+        margin: 0;
+        display: flex;
+        width: 80vw;
+        height: 100vh;
+        margin-left: 35px;
+    }
+    /* Lists Background */
+    .lists {
+        top: 800px;
+        height: 127vh;
+        display: grid;
+        width: 25vw;
+        right: inherit;
+    }
+
+    .brand {
+        height: 48px;
+        filter: brightness(0) invert(1);
+    }
+    .brandness {
+        height: 48px;
+        filter: brightness(0) invert(1);
+        width: 10px;
+    }
+
+    .icon {
+        margin-top: 20px; 
+        left: 20px;
+        height: 40px;
+        fill: #fff;
+    }
+
+    .icon ul {
+        display: block;
+        text-decoration: none;
+        list-style: none;
+    }
+
+    .icon ul li {
+        display: flex;
+        margin-left: 80px;
+    }
+
+    .icon ul li p {
+        margin-left: 10px;
+        margin-top: 15px;
+        display: flex;
+    }
+
+    .icon ul li img {
+        margin-top: 10px;
+        padding-left: 5px;
+        width: 30px;
+        height: 30px;
+        filter: brightness(0) invert(1);
+    }
+
+    .icon button {
+        color: white;
+        width: 180px;
+        height: 40px;
+        margin-top: 10px;
+        margin-left: 30px;
+        background-color: #1DA1F2;
+        border: none;
+        font-weight: bold;
+        border-radius: 30PX;
+    }
+
+    .profile {
+        display: flex;
+        margin-top: 70px;
+        margin-left: -40px;
+    }
+
+    .profile img {
+        height: 60px;
+        width: 60px;
+        border-radius: 30px;
+    }
+
+    .profile img:nth-last-child() {
+        margin-top: 90px;
+    }
+
+    .name {
+        margin-left: 10px;
+        margin-top: 25px;
+    }
+    .profile img {
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+
+    /* Tweets Background */
+    .tweets {
+        position: relative;
+        margin-top: 42vh;
+        height: 170vh;
+    }
+
+    .line {
+        width: 100%;
+        height: 92px;
+    }
+
+    .line p:nth-child(1) {
+        font-weight: bold;
+    }
+
+    .line h2 {
+        margin: 15px;
+        margin-top: 40px;
+    }
+
+    .type {
+        display: flex;
+        margin: 70px;
+        margin-top: 25px;
+        justify-content: space-between;
+        
+    }
+    .whats {
+        padding: 20px;
+        width: 100% auto;
+        height: 120px;
+        border-bottom: 1px solid grey;
+    }
+
+    .whats__profile {
+        display: flex;
+    }
+
+    .whats__profile p {
+        font-size: 20px;
+    }
+
+    .whats p {
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .whats ul {
+        display: flex;
+        text-decoration: none;
+        list-style: none;
+        padding-left: 10px;
+        margin-left: 40px;
+        justify-content: space-evenly;
+    }
+
+    .whats ul li {
+        text-decoration: none;
+        color: white;
+    }
+
+    .whats ul li img {
+        margin-top: 18px;
+        margin-left: 2px;
+        width: 20px;
+        height: 20px;
+        filter: invert(46%) sepia(99%) saturate(1449%) hue-rotate(176deg) brightness(100%) contrast(91%);
+        padding: 1px;
+    }
+
+    .whats button {
+        margin-left: 70px;
+        margin-top: 10px;
+        width: 70px;
+        height: 30px;
+        border-radius: 20px;
+        border: none;
+        color: white;
+        background-color: #1DA1F2;
+    }
+
+    .before {
+        padding: 10px;
+        width: auto;
+        height: 200px;
+        border-bottom: 1px solid gray;
+    }
+
+    .before button {
+        margin-top: 20px;
+        width: 90px;
+        height: 40px;
+        border: none;
+        margin-left: 20px;
+        border-radius: 20px;
+    }
+
+    .before p {
+        margin-left: 20px;
+    }
+
+    .before h2 {
+        font-size: 2rem;
+        margin-left: 15px;
+    }
+
+    .tweet {
+        display: flex;
+        margin-bottom: 2px;
+        padding: 10px 15px;
+    }
+
+    .tweet:hover {
+        background: rgba(0, 0, 0, 0.03);
+        cursor: pointer;
+    }
+    .tweet__author-logo {
+        width: 49px;
+        height: 49px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .tweet__header {
+        display: flex;
+    }
+
+    .tweet__author-name {
+        font-size: 15px;
+        font-weight: 700;
+        color: whitesmoke;
+        margin-right: 5px;
+    }
+
+    .tweet__author-slug {
+        color: #5b7083;
+        font-size: 15px;
+    }
+
+    .tweet__publish-time {
+        margin-left: 5px;
+        color: #657786;
+    }
+
+    .tweet__image {
+        width: 100%;
+        border-radius: 15px;
+        margin-top: 10px;
+    }
+
+    .tweet__content img {
+        width: 100%;
+        border-radius: 15px;
+        margin-top: 10px;
+    }
+
+    /* TRENDS */
+    .trends {
+        width: 30%;
+        height: 127vh;
+    }
+
+    .search_engine button {
+        display: block;
+        margin-top: 20px;
+        width: 20vw;
+        height: 50px;
+        background: rgba(27, 27, 30, 0.976);
+        margin-left: 15px;
+        border-radius: 30px;
+        border: none;
+        color: whitesmoke;
+    }
+
+    .trends-for-you {
+        margin-top: 20px;
+        border-radius: 15px;
+        background: rgba(27, 27, 30, 0.976);
+        margin-bottom: 15px;
+        margin-left: 15px;
+        width: 20vw;
+    }
+
+    .trends-for-you__block {
+        /* border-bottom: 1px solid #e6ecf0; */
+        padding: 10px 15px;
+    }
+
+    .trends-for-you__block:last-child {
+        border-bottom: none;
+    }
+
+    .trends-for-you__heading {
+        font-size: 19px;
+        font-weight: bold;
+        color: whitesmoke;
+    }
+
+    .trends-for-you__meta-information {
+        font-size: 13px;
+        font-weight: 300;
+        color: #657786;
+    }
+
+    .trends-for-you__trend-name {
+        font-size: 15px;
+        color: whitesmoke;
+        font-weight: bold;
+        margin-bottom: 5px;
+        margin-top: 2px;
+    }
+
+    .who-to-follow {
+        /* background: #f5f8fa; */
+        border-radius: 15px;
+        margin-top: 20px;
+        border-radius: 15px;
+        background: rgba(27, 27, 30, 0.976);
+        margin-bottom: 15px;
+        margin-left: 15px;
+        width: 20vw;
+    }
+
+
+    .who-to-follow__block {
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        /* border-bottom: 1px solid #e6ecf0; */
+    }
+
+    .who-to-follow__block:last-child {
+        border-bottom: none;
+    }
+
+    .who-to-follow__author-logo {
+        width: 49px;
+        height: 49px;
+        border-radius: 50px;
+        margin-right: 10px;
+    }
+
+    .who-to-follow__author-slug {
+        color: #657786;
+        font-size: 15px;
+    }
+
+    .who-to-follow__author-name {
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    .who-to-follow__content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .who-to-follow__heading {
+        font-size: 19px;
+        font-weight: bold;
+        color: whitesmoke;
+    }
+
+    .who-to-follow__button {
+        border: 1px solid #1da0f2;
+        color: #1da0f2;
+        font-size: 15px;
+        font-weight: 700;
+        border-radius: 15px;
+        padding: 5px;
+        min-width: 67px;
+        text-align: center;
+    }
+
+    .who-to-follow__button:hover {
+        background: rgba(29, 47, 242, 0);
+        cursor: pointer;
+    }
+
+}
